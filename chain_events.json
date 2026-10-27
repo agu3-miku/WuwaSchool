@@ -1,0 +1,135 @@
+[
+  {"type": "event", "id": "ch_sanhua_1", "kind": "chain", "owner": "散华",
+   "title": "散华① · 留一盏灯",
+   "text": "她把道场的灯关到只剩你脚下那一圈。「今晚不教招式。你先告诉我，为什么握刀会抖。」",
+   "cost": {"stam": 14},
+   "effects": {
+     "说实话：怕输": [{"target": "散华", "aff": 5, "set_flags": ["散华_坦诚"]}],
+     "笑着说没事": [{"target": "散华", "aff": 1}]
+   }},
+  {"type": "event", "id": "ch_sanhua_2", "kind": "chain", "owner": "散华",
+   "title": "散华② · 不躲的那一击",
+   "text": "竹刀劈下来的角度很刁。她没喊停，也没收力。",
+   "req_flags": ["散华_坦诚"], "cost": {"stam": 24, "hp": 5},
+   "effects": {
+     "迎上去": [{"target": "散华", "aff": 7}, {"target": "@self", "hp": -6}],
+     "侧身卸力": [{"target": "散华", "aff": 3}, {"target": "@self", "hp": -2}]
+   }},
+  {"type": "event", "id": "ch_sanhua_3", "kind": "chain", "owner": "散华",
+   "title": "散华③ · 一刀之后",
+   "text": "她收刀，护腕底下一道旧疤露出来。「我也是这么过来的。明天还来？」",
+   "cost": {"stam": 10},
+   "effects": [
+     {"target": "散华", "aff": 8, "reason": "她第一次在你面前把刀尖朝下"},
+     {"target": "@self", "hp": -2}
+   ]},
+
+  {"type": "event", "id": "ch_yangyang_1", "kind": "chain", "owner": "秧秧",
+   "title": "秧秧① · 点歌单的第三行",
+   "text": "广播室门没锁。桌上摊着那本点歌单，第三行的字被反复描过，墨都洇开了。",
+   "effects": {
+     "把歌名补完整": [{"target": "秧秧", "aff": 5, "set_flags": ["秧秧_点歌回应"]}],
+     "只坐旁边听": [{"target": "秧秧", "aff": 3}]
+   }},
+  {"type": "event", "id": "ch_yangyang_2", "kind": "chain", "owner": "秧秧",
+   "title": "秧秧② · 啸叫的三秒",
+   "text": "音响突然回授，刺耳的啸叫灌满走廊。她没关麦，先把你往身后挡了一下。",
+   "req_flags": ["秧秧_点歌回应"], "cost": {"stam": 6},
+   "effects": [
+     {"target": "秧秧", "aff": 6, "reason": "「刚才那一下，是条件反射，不是台词。」"},
+     {"target": "@self", "str": -4}
+   ]},
+  {"type": "event", "id": "ch_yangyang_3", "kind": "chain", "owner": "秧秧",
+   "title": "秧秧③ · 麦克风后面的那个人",
+   "text": "放学后的广播室，麦克风开着，没放歌。「第三排靠窗的那个家伙，」她看着你，「今天不用匿名了。」",
+   "effects": [
+     {"target": "秧秧", "aff": 9, "reason": "她把点歌单最后一页撕下来，塞进你口袋"}
+   ]},
+
+  {"type": "event", "id": "ch_jinxin_1", "kind": "chain", "owner": "今汐",
+   "title": "今汐① · 通讯录的空栏",
+   "text": "学生会的通讯录被她推到你面前，最后一栏空白，铅笔印很浅，像描过又擦掉。",
+   "effects": {
+     "把名字填上": [{"target": "今汐", "aff": 5, "set_flags": ["今汐_留栏"]}],
+     "问她这是谁的": [{"target": "今汐", "aff": 2}]
+   }},
+  {"type": "event", "id": "ch_jinxin_2", "kind": "chain", "owner": "今汐",
+   "title": "今汐② · 雨里的名单",
+   "text": "突降的雨把露天摊位冲散，她一手压着名单一手发伞，喊的却是你先撤。",
+   "req_flags": ["今汐_留栏"], "cost": {"stam": 16, "str": 4},
+   "effects": [
+     {"target": "今汐", "aff": 6, "reason": "你把名单抢过来折好塞进校服里"},
+     {"target": "@self", "hp": -3}
+   ]},
+  {"type": "event", "id": "ch_jinxin_3", "kind": "chain", "owner": "今汐",
+   "title": "今汐③ · 会长的空栏",
+   "text": "「这份名单以后你自己收。」她把通讯录合上，指节在那一栏敲了一下，很轻。",
+   "effects": [
+     {"target": "今汐", "aff": 9, "reason": "她第一次在你面前，把笔放下"}
+   ]},
+
+  {"type": "event", "id": "ch_verina_1", "kind": "chain", "owner": "维里奈",
+   "title": "维里奈① · 一盆快蔫的穗子",
+   "text": "「根还活着，」她把花盆转过来，枯叶底下有一点白，「但你得每天跟它说一句话，我试过，管用。」",
+   "effects": {
+     "认真照做": [{"target": "维里奈", "aff": 5, "set_flags": ["维里奈_共植"]}],
+     "觉得是玩笑": [{"target": "维里奈", "aff": 1}]
+   }},
+  {"type": "event", "id": "ch_verina_2", "kind": "chain", "owner": "维里奈",
+   "title": "维里奈② · 新叶那天",
+   "text": "第七天，穗子冒了芽。她蹲在旁边看了很久，忽然说：「它比你诚实。」",
+   "req_flags": ["维里奈_共植"], "cost": {"stam": 8},
+   "effects": [
+     {"target": "维里奈", "aff": 6, "reason": "她让你把新叶的样子画进花房的值班表"},
+     {"target": "@self", "hp": 4}
+   ]},
+  {"type": "event", "id": "ch_verina_3", "kind": "chain", "owner": "维里奈",
+   "title": "维里奈③ · 不会说谎的花房",
+   "text": "「你看，它朝你那边歪了。」花房很静，只有浇水壶的滴水声。她没回头。",
+   "effects": [
+     {"target": "维里奈", "aff": 9, "reason": "那盆穗子后来一直摆在值班台最中间"}
+   ]},
+
+  {"type": "event", "id": "ch_baizhi_1", "kind": "chain", "owner": "白芷",
+   "title": "白芷① · 第一张处方笺",
+   "text": "「第一条：十一点前睡。第二条：疼了就说。第三条——」她顿了一下，把笔递给你，「你自己填。」",
+   "effects": {
+     "填上「不撒谎」": [{"target": "白芷", "aff": 5, "set_flags": ["白芷_处方"]}],
+     "填上「别管我」": [{"target": "白芷", "aff": -1, "reason": "她把那张笺折起来，没扔"}]
+   }},
+  {"type": "event", "id": "ch_baizhi_2", "kind": "chain", "owner": "白芷",
+   "title": "白芷② · 凌晨一点的体温计",
+   "text": "你没听话。她推开宿舍门的时候，体温计已经凉了。「第三条，你现在做到了。」",
+   "req_flags": ["白芷_处方"], "cost": {"hp": 8, "str": 6},
+   "effects": [
+     {"target": "白芷", "aff": 6, "reason": "她守到天亮，没写进值班记录"},
+     {"target": "@self", "hp": 12, "str": -10}
+   ]},
+  {"type": "event", "id": "ch_baizhi_3", "kind": "chain", "owner": "白芷",
+   "title": "白芷③ · 处方笺最后一格",
+   "text": "「早睡、别硬撑、别撒谎。」她把盖好章的那张笺递过来，「恭喜，毕业了。」",
+   "effects": [
+     {"target": "白芷", "aff": 9, "reason": "处方笺被她收进抽屉最底层，没让你扔"}
+   ]},
+
+  {"type": "event", "id": "ch_festival_1", "kind": "chain",
+   "title": "学园祭① · 展板塌了",
+   "text": "风最大的时候展板倒了，压住半箱彩灯。今汐喊了你的名字，秧秧的音响正好开始啸叫。",
+   "effects": {
+     "先扶展板": [{"target": "今汐", "aff": 4}, {"target": "@self", "stam": -10}],
+     "先救音响": [{"target": "秧秧", "aff": 4}, {"target": "@self", "stam": -8}]
+   }},
+  {"type": "event", "id": "ch_festival_2", "kind": "chain",
+   "title": "学园祭② · 花房的急救站",
+   "text": "维里奈把花房改成了临时医务点，白芷在门口拦下每一个还想硬撑的摊位负责人。",
+   "effects": [
+     {"target": "维里奈", "aff": 3}, {"target": "白芷", "aff": 3},
+     {"target": "@self", "hp": 6, "str": -6}
+   ]},
+  {"type": "event", "id": "ch_festival_3", "kind": "chain",
+   "title": "学园祭③ · 最后一盏灯",
+   "text": "闭场音乐响起来，灯一盏一盏关。散华把道场的灯笼递给你：「最后一盏，你关。」",
+   "effects": [
+     {"target": "@all", "aff": 3, "reason": "全校都在笑，没人想回家"}
+   ]}
+]

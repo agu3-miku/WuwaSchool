@@ -1,0 +1,85 @@
+[
+  {
+    "type": "chain",
+    "id": "chain_sanhua_blade",
+    "owner": "散华",
+    "name": "一刀之后，不再退半步",
+    "description": "道场的灯每晚只留一盏。散华说，剑道里没有「差不多」，人也一样。",
+    "color": "#C0392B",
+    "nodes": [
+      "ch_sanhua_1",
+      "ch_sanhua_2",
+      "ch_sanhua_3"
+    ],
+    "reward": {"aff": 12, "hp": -6, "flags": ["散华_真传"], "str": -6}
+  },
+  {
+    "type": "chain",
+    "id": "chain_yangyang_mic",
+    "owner": "秧秧",
+    "name": "麦克风后面的那个人",
+    "description": "午间点歌台收了三年的匿名投稿，署名终于不再是「第三排靠窗」。",
+    "color": "#E0A020",
+    "nodes": [
+      "ch_yangyang_1",
+      "ch_yangyang_2",
+      "ch_yangyang_3"
+    ],
+    "reward": {"aff": 12, "str": -8, "flags": ["秧秧_专属曲目"]}
+  },
+  {
+    "type": "chain",
+    "id": "chain_jinxin_council",
+    "owner": "今汐",
+    "name": "会长的空栏",
+    "description": "学生会的通讯录最后一页，一直留着一个没填的名字。",
+    "color": "#3A6EA5",
+    "nodes": [
+      "ch_jinxin_1",
+      "ch_jinxin_2",
+      "ch_jinxin_3"
+    ],
+    "reward": {"aff": 12, "str": -4, "hp": 4, "flags": ["今汐_共事"]}
+  },
+  {
+    "type": "chain",
+    "id": "chain_verina_garden",
+    "owner": "维里奈",
+    "name": "不会说谎的花房",
+    "description": "她说花比人简单。直到你把那盆快蔫的穗子养出了新叶。",
+    "color": "#3A9A5C",
+    "nodes": [
+      "ch_verina_1",
+      "ch_verina_2",
+      "ch_verina_3"
+    ],
+    "reward": {"aff": 12, "hp": 10, "str": -10, "flags": ["维里奈_共植"]}
+  },
+  {
+    "type": "chain",
+    "id": "chain_baizhi_cure",
+    "owner": "白芷",
+    "name": "处方笺最后一格",
+    "description": "「早睡、别硬撑、别撒谎。」你做到了三条，她才把最后一张处方笺递过来。",
+    "color": "#7E57C2",
+    "nodes": [
+      "ch_baizhi_1",
+      "ch_baizhi_2",
+      "ch_baizhi_3"
+    ],
+    "reward": {"aff": 12, "hp": 18, "str": -12, "flags": ["白芷_痊愈"]}
+  },
+  {
+    "type": "chain",
+    "id": "chain_festival",
+    "name": "学园祭的最后一盏灯",
+    "description": "全校共同的结局：展板塌了一次，音响啸叫了一次，但没人想提前回家。",
+    "color": "#D2691E",
+    "nodes": [
+      "ch_festival_1",
+      "ch_festival_2",
+      "ch_festival_3"
+    ],
+    "reward": {"aff": 4, "@all_aff": 0, "str": -8, "hp": -4, "flags": ["学园祭落幕"]}
+  }
+]

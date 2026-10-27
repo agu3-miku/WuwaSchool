@@ -1,0 +1,223 @@
+[
+  {
+    "type": "event",
+    "id": "ev_morning_assembly",
+    "kind": "public",
+    "title": "升旗仪式上的风",
+    "text": "今汐站在主席台边整队，余光扫过你那一排。麦克风没开，她先对你比了个「站直」的口型。",
+    "weight": 3,
+    "effects": [
+      {"target": "今汐", "aff": 2, "reason": "被会长点名也不算坏事"}
+    ]
+  },
+  {
+    "type": "event",
+    "id": "ev_lost_umbrella",
+    "kind": "public",
+    "title": "失物招领：一把没写名字的伞",
+    "text": "雨说下就下。失物柜里多出一把长柄伞，伞骨很稳，挂着一张没署名的便签。",
+    "weight": 2,
+    "effects": {
+      "还到失物处": [
+        {"target": "@all", "aff": 1, "reason": "拾金不昧，全校点赞"}
+      ],
+      "先撑回去再说": [
+        {"target": "@self", "str": 4},
+        {"target": "@all", "aff": -1, "reason": "伞的主人淋了一路"}
+      ]
+    },
+    "next_on": {
+      "先撑回去再说": "ev_umbrella_return"
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_umbrella_return",
+    "kind": "encounter",
+    "title": "还伞的人堵在教室门口",
+    "text": "「伞是你拿的吧。」她没生气，只是把袖子拧了拧，还在滴水。",
+    "req_flags": [],
+    "effects": {
+      "老实道歉": [
+        {"target": "秧秧", "aff": 6, "reason": "淋湿的是秧秧，她反而先笑了"}
+      ],
+      "装傻": [
+        {"target": "秧秧", "aff": -3}
+      ]
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_greenhouse_water",
+    "kind": "encounter",
+    "owner": "维里奈",
+    "title": "花房的浇水日",
+    "text": "维里奈把水管递过来：「这盆今天喝两遍，剩下的我来。」土软得像刚醒。",
+    "weight": 3,
+    "cost": {"stam": 8},
+    "effects": {
+      "认真浇完": [
+        {"target": "维里奈", "aff": 5},
+        {"target": "@self", "hp": 3}
+      ],
+      "偷偷少浇一半": [
+        {"target": "维里奈", "aff": -2, "reason": "她第二天就发现了，没说破"}
+      ]
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_dojo_spar",
+    "kind": "encounter",
+    "owner": "散华",
+    "title": "道场的一对一",
+    "text": "散华把护具扔过来，重量压得手腕一沉。「今天只练迎击，三回合。」",
+    "weight": 2,
+    "cost": {"stam": 26, "hp": 3},
+    "effects": {
+      "正面接下": [
+        {"target": "散华", "aff": 7, "reason": "没躲，她记住了"},
+        {"target": "@self", "hp": -4}
+      ],
+      "先守后攻": [
+        {"target": "散华", "aff": 3},
+        {"target": "@self", "hp": -1}
+      ],
+      "说体力不够": [
+        {"target": "散华", "aff": -1, "reason": "「明天别找借口。」"}
+      ]
+    },
+    "block_flags": ["散华_受伤"]
+  },
+  {
+    "type": "event",
+    "id": "ev_infirmary_fever",
+    "kind": "encounter",
+    "owner": "白芷",
+    "title": "第二节课就烧起来了",
+    "text": "白芷把冰凉的退热贴拍上你额头，动作快得像在抢救一盆快枯的绿萝。",
+    "weight": 1.5,
+    "req_flags": [],
+    "effects": {
+      "乖乖躺下": [
+        {"target": "白芷", "aff": 5},
+        {"target": "@self", "hp": 14, "str": -8}
+      ],
+      "说还能撑": [
+        {"target": "@self", "hp": -6, "str": 6},
+        {"target": "白芷", "aff": -2, "reason": "她把药片压在你手心里，没再劝"}
+      ]
+    },
+    "set_flags": ["发烧休养"]
+  },
+  {
+    "type": "event",
+    "id": "ev_broadcast_request",
+    "kind": "encounter",
+    "owner": "秧秧",
+    "title": "点歌单上的匿名投稿",
+    "text": "秧秧把点歌单举到你面前，第三行字歪歪扭扭：「点一首能让人别走那么快的歌。」",
+    "weight": 2.5,
+    "cost": {"stam": 4},
+    "effects": {
+      "承认是自己写的": [
+        {"target": "秧秧", "aff": 8, "reason": "她在广播里笑了整整三秒才开唱"}
+      ],
+      "假装不认识字": [
+        {"target": "秧秧", "aff": 1}
+      ]
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_council_paperwork",
+    "kind": "encounter",
+    "owner": "今汐",
+    "title": "学生会室的夜灯",
+    "text": "今汐埋在一摞申请表后面，笔尖顿了一下：「……你来得正好，这里要两个人签。」",
+    "weight": 2,
+    "cost": {"stam": 14, "str": 6},
+    "effects": {
+      "陪她弄完": [
+        {"target": "今汐", "aff": 6},
+        {"target": "@self", "str": -4}
+      ],
+      "帮忙泡咖啡": [
+        {"target": "今汐", "aff": 4},
+        {"target": "@self", "hp": -2}
+      ]
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_rooftop_confession_practice",
+    "kind": "encounter",
+    "owner": "秧秧",
+    "title": "天台上的「练习告白」",
+    "text": "秧秧背靠着水箱，把一张草稿纸拍在膝盖上：「别紧张，这只是广播剧台词练习。」纸上的名字被涂掉了。",
+    "weight": 1,
+    "day_min": 15,
+    "req_flags": ["秧秧_点歌回应"],
+    "effects": {
+      "配合念下去": [
+        {"target": "秧秧", "aff": 10, "reason": "台词最后一句，她没照稿"}
+      ],
+      "笑着拆穿": [
+        {"target": "秧秧", "aff": 4}
+      ]
+    }
+  },
+  {
+    "type": "event",
+    "id": "ev_exam_week",
+    "kind": "public",
+    "title": "期中考周，走廊都是翻书声",
+    "text": "白芷把「每天睡够六小时」写成横幅挂在楼梯口。没人敢撕。",
+    "day_min": 10,
+    "weight": 2,
+    "effects": [
+      {"target": "@self", "str": 10, "stam": -6}
+    ]
+  },
+  {
+    "type": "event",
+    "id": "ev_festival_prep",
+    "kind": "public",
+    "title": "学园祭前夜的纸箱山",
+    "text": "展板、彩灯、借来的折叠桌。今汐的名单写到第 27 项，笔没停过。",
+    "day_min": 22,
+    "day_max": 28,
+    "weight": 3,
+    "effects": {
+      "去搬箱子": [
+        {"target": "今汐", "aff": 5},
+        {"target": "@self", "stam": -12}
+      ],
+      "去帮秧秧调音响": [
+        {"target": "秧秧", "aff": 5},
+        {"target": "@self", "stam": -8}
+      ],
+      "躲进花房": [
+        {"target": "维里奈", "aff": 4},
+        {"target": "@self", "str": -4}
+      ]
+    },
+    "unlock_chain": "chain_festival"
+  },
+  {
+    "type": "event",
+    "id": "ev_weekend_extra",
+    "kind": "weekend",
+    "title": "周末加开的社团临时练习",
+    "text": "本来想睡懒觉，通知贴在门口：「临时合练，缺席的人下次自己跟我对打。」落款看不清，笔迹很硬。",
+    "effects": {
+      "去": [
+        {"target": "散华", "aff": 5},
+        {"target": "@self", "stam": -16, "hp": -3}
+      ],
+      "装没看见": [
+        {"target": "@self", "str": 4}
+      ]
+    }
+  }
+]
